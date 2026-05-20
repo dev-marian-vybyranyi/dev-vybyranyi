@@ -14,9 +14,14 @@ export function ProjectCard({ project }) {
         />
       </div>
       <CardContent className="flex flex-col flex-1 p-6 sm:p-8">
-        <h3 className="text-2xl font-bold tracking-tight mb-2">
+        <h3 className="text-2xl font-bold tracking-tight mb-1">
           {project.title}
         </h3>
+        {project.role && (
+          <p className="text-sm font-medium text-primary mb-3">
+            Role: {project.role}
+          </p>
+        )}
         
         <div className="flex flex-wrap gap-2 mb-4">
           {project.tags.map((tag) => (

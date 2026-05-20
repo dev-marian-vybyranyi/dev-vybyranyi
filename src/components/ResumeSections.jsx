@@ -26,7 +26,7 @@ export function EmploymentSection({ employment }) {
               </span>
             </div>
             <p className="text-lg text-primary/80 mb-4 font-medium">{job.company}</p>
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-muted-foreground leading-relaxed whitespace-pre-line">
               {job.description}
             </p>
           </div>

@@ -31,11 +31,11 @@ function App() {
             </div>
           </section>
 
-          <EmploymentSection employment={portfolioData.employment} />
+          <SkillsSection skills={portfolioData.skills} />
 
           <EducationSection education={portfolioData.education} />
 
-          <SkillsSection skills={portfolioData.skills} />
+          <EmploymentSection employment={portfolioData.employment} />
 
           <LanguagesSection languages={portfolioData.languages} />
         </main>

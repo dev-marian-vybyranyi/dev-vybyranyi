@@ -1,7 +1,8 @@
 import { useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
+import { buttonVariants } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
 import { ExternalLink, Code } from "lucide-react"
 
 export function ProjectCard({ project, priority = false }) {
@@ -14,7 +15,7 @@ export function ProjectCard({ project, priority = false }) {
         <img 
           src={project.screenshots[0]} 
           alt={project.title}
-          fetchpriority={priority ? "high" : undefined}
+          fetchPriority={priority ? "high" : undefined}
           loading={priority ? undefined : "lazy"}
           decoding="async"
           className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 hover:scale-105"
@@ -54,20 +55,26 @@ export function ProjectCard({ project, priority = false }) {
 
         <div className="flex flex-wrap gap-3 mt-auto">
           {project.demoUrl && (
-            <Button asChild size="sm" className="group">
-              <a href={project.demoUrl} target="_blank" rel="noreferrer">
-                View Live
-                <ExternalLink className="ml-2 h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </a>
-            </Button>
+            <a
+              href={project.demoUrl}
+              target="_blank"
+              rel="noreferrer"
+              className={cn(buttonVariants({ size: "sm" }), "group")}
+            >
+              View Live
+              <ExternalLink className="ml-2 h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </a>
           )}
           {project.githubUrl && (
-            <Button asChild variant="outline" size="sm">
-              <a href={project.githubUrl} target="_blank" rel="noreferrer">
-                <Code className="mr-2 h-3.5 w-3.5" />
-                Source
-              </a>
-            </Button>
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noreferrer"
+              className={cn(buttonVariants({ variant: "outline", size: "sm" }))}
+            >
+              <Code className="mr-2 h-3.5 w-3.5" />
+              Source
+            </a>
           )}
         </div>
       </CardContent>

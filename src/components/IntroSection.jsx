@@ -1,5 +1,6 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import { FaGithub } from "react-icons/fa";
 import { ThemeToggle } from "./ThemeToggle";
 
@@ -11,7 +12,7 @@ export function IntroSection({ personalInfo }) {
     <section className="flex flex-col h-full w-full p-8 pt-12 xl:p-12 xl:pt-16 glass-panel overflow-y-auto hidden-scrollbar">
       <div className="flex items-center justify-between mb-10">
         <Avatar className="h-48 w-48 border border-border">
-          <AvatarImage src={avatarUrl} alt={name} fetchpriority="high" decoding="async" />
+          <AvatarImage src={avatarUrl} alt={name} fetchPriority="high" decoding="async" />
           <AvatarFallback>{name.charAt(0)}</AvatarFallback>
         </Avatar>
         <ThemeToggle />
@@ -63,21 +64,15 @@ export function IntroSection({ personalInfo }) {
         })()}
 
         <div className="flex gap-4">
-          <Button
-            variant="outline"
-            size="icon"
-            asChild
-            className="rounded-full"
+          <a
+            href={socialLinks.github}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="GitHub"
+            className={cn(buttonVariants({ variant: "outline", size: "icon" }), "rounded-full")}
           >
-            <a
-              href={socialLinks.github}
-              target="_blank"
-              rel="noreferrer"
-              aria-label="GitHub"
-            >
-              <FaGithub className="h-5 w-5" />
-            </a>
-          </Button>
+            <FaGithub className="h-5 w-5" />
+          </a>
         </div>
       </div>
       <div className="mt-12 text-xs text-muted-foreground">

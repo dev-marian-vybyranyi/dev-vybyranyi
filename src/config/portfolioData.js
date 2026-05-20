@@ -1,15 +1,13 @@
 export const portfolioData = {
   personalInfo: {
-    name: "Alex Developer",
-    role: "Frontend Architect",
-    avatarUrl: "https://i.pravatar.cc/150?u=a042581f4e29026704d",
-    bio: "I build fast, scalable, and visually stunning web applications with modern tools. Minimalist at heart, obsessive about user experience.",
+    name: "Marian Vybyranyi",
+    role: "Full-Stack Developer",
+    avatarUrl: "public/avatar.jpg",
+    bio: "I'm a Full-Stack JavaScript/TypeScript developer with 4  years of experience building scalable web applications for startups and SaaS platforms. I work across both frontend and backend development, delivering responsive user interfaces, reliable APIs, and maintainable production systems.",
     socialLinks: {
-      github: "https://github.com/example",
-      linkedin: "https://linkedin.com/in/example",
-      telegram: "https://t.me/example"
+      github: "https://github.com/dev-marian-vybyranyi",
     },
-    introVideoUrl: "" // Keeping empty or adding URL if needed, but the original plan had it. Let's keep it.
+    introVideoUrl: "hhttps://youtu.be/ytz0ce00COY"
   },
   skills: [
     "JavaScript", "TypeScript", "React", "Next.js", "Vue", "Node.js", "Tailwind CSS", "GraphQL", "Framer Motion", "Jest"

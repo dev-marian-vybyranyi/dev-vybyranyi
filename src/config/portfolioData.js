@@ -10,7 +10,45 @@ export const portfolioData = {
     introVideoUrl: "hhttps://youtu.be/ytz0ce00COY"
   },
   skills: [
-    "JavaScript", "TypeScript", "React", "Next.js", "Vue", "Node.js", "Tailwind CSS", "GraphQL", "Framer Motion", "Jest"
+    {
+      category: "Programming Languages",
+      items: ["JavaScript", "TypeScript"]
+    },
+    {
+      category: "Front-End Development",
+      items: [
+        "Next.JS", "React.JS", "Redux", "Redux-Toolkit", "Material UI", 
+        "Ant Design", "TailwindCSS", "Shadcn UI", "styled-components", 
+        "SCSS/Less/Sass", "HTML5/CSS3", "chart.js", "ApexCharts", 
+        "Highcharts", "Webflow"
+      ]
+    },
+    {
+      category: "Back-End Development",
+      items: [
+        "Node.js", "Express.js", "Nest.js", "Firebase", "Supabase", 
+        "GraphQL", "Sequelize", "TypeORM", "Stripe", "Twilio", 
+        "SendGrid", "RabbitMQ", "socket.io", "Websockets", "Auth0", 
+        "JWT", "Actions (CI/CD)", "Mocha", "Jest", "Docker", 
+        "Algolia", "Kafka", "ElasticSearch"
+      ]
+    },
+    {
+      category: "Servers/Databases",
+      items: ["MongoDB", "Firebase", "PostgreSQL", "MySQL", "Pinecone DB", "Neo4j"]
+    },
+    {
+      category: "Cloud Platforms",
+      items: ["AWS (EC2, Lambda, API Gateway, S3, RDS, Cognito, Elastic Beanstalk)"]
+    },
+    {
+      category: "Source Control Systems",
+      items: ["GitHub", "GitLab", "BitBucket"]
+    },
+    {
+      category: "Tracking System",
+      items: ["Jira", "Trello"]
+    }
   ],
   languages: [
     { name: "English", level: "Native or Bilingual Proficiency" },

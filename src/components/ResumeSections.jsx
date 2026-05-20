@@ -66,11 +66,18 @@ export function SkillsSection({ skills }) {
   return (
     <section className="mb-16">
       <SectionHeading>Skills</SectionHeading>
-      <div className="flex flex-wrap gap-3">
-        {skills.map((skill) => (
-          <Badge key={skill} variant="secondary" className="px-4 py-2 text-sm font-medium bg-secondary/50 hover:bg-secondary">
-            {skill}
-          </Badge>
+      <div className="space-y-6">
+        {skills.map((skillCategory) => (
+          <div key={skillCategory.category}>
+            <h3 className="text-lg font-semibold text-foreground mb-3">{skillCategory.category}</h3>
+            <div className="flex flex-wrap gap-2">
+              {skillCategory.items.map((item) => (
+                <Badge key={item} variant="secondary" className="px-3 py-1 text-sm font-medium bg-secondary/50 hover:bg-secondary">
+                  {item}
+                </Badge>
+              ))}
+            </div>
+          </div>
         ))}
       </div>
     </section>

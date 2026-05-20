@@ -51,9 +51,8 @@ export const portfolioData = {
     }
   ],
   languages: [
-    { name: "English", level: "Native or Bilingual Proficiency" },
-    { name: "Ukrainian", level: "Native Proficiency" },
-    { name: "Spanish", level: "Professional Working Proficiency" }
+    { name: "English", level: "Upper-Intermediate" },
+    { name: "Ukrainian", level: "Native Speaker" },
   ],
   employment: [
     {

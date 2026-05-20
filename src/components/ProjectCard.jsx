@@ -1,9 +1,13 @@
+import { useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { ExternalLink, Code } from "lucide-react"
 
 export function ProjectCard({ project }) {
+  const [isExpanded, setIsExpanded] = useState(false)
+  const isLongDescription = project.description && project.description.length > 150
+
   return (
     <Card className="flex flex-col overflow-hidden border-border/50 hover:border-border/80 glass-card py-0">
       <div className="w-full aspect-video bg-muted/50 overflow-hidden relative shrink-0">
@@ -31,9 +35,38 @@ export function ProjectCard({ project }) {
           ))}
         </div>
 
-        <p className="text-muted-foreground text-base leading-loose max-w-prose mb-8 flex-1">
-          {project.description}
-        </p>
+        <div className="mb-6 flex-1">
+          <p className={`text-muted-foreground text-base leading-loose max-w-prose whitespace-pre-line ${isExpanded ? '' : 'line-clamp-3'}`}>
+            {project.description}
+          </p>
+          {isLongDescription && (
+            <button 
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="text-primary font-medium text-sm mt-2 hover:underline focus:outline-none"
+            >
+              {isExpanded ? "Show less" : "Show more"}
+            </button>
+          )}
+        </div>
+
+        <div className="flex flex-wrap gap-3 mt-auto">
+          {project.demoUrl && (
+            <Button asChild size="sm" className="group">
+              <a href={project.demoUrl} target="_blank" rel="noreferrer">
+                View Live
+                <ExternalLink className="ml-2 h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </a>
+            </Button>
+          )}
+          {project.githubUrl && (
+            <Button asChild variant="outline" size="sm">
+              <a href={project.githubUrl} target="_blank" rel="noreferrer">
+                <Code className="mr-2 h-3.5 w-3.5" />
+                Source
+              </a>
+            </Button>
+          )}
+        </div>
       </CardContent>
     </Card>
   )

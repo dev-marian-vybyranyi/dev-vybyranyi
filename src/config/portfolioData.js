@@ -39,7 +39,7 @@ export const portfolioData = {
     },
     {
       category: "Cloud Platforms",
-      items: ["AWS (EC2, Lambda, API Gateway, S3, RDS, Cognito, Elastic Beanstalk)"]
+      items: ["AWS", "EC2", "Lambda", "API Gateway", "S3", "RDS", "Cognito", "Elastic Beanstalk"]
     },
     {
       category: "Source Control Systems",

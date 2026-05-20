@@ -108,9 +108,7 @@
     height: 3.5rem;           /* explicit height = drawer top offset */
     display: flex;
     align-items: center;
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: hsl(var(--background) / 0.72);
+    background-color: hsl(var(--background));
     border-bottom: 1px solid transparent;
     transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
   }
@@ -125,7 +123,7 @@
   }
 
   .site-header--scrolled {
-    background-color: hsl(var(--background) / 0.92);
+    background-color: hsl(var(--background));
     border-bottom-color: hsl(var(--border) / 0.6);
     box-shadow: 0 1px 20px hsl(var(--foreground) / 0.06);
   }

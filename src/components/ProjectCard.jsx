@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { ExternalLink, Code } from "lucide-react"
 
-export function ProjectCard({ project }) {
+export function ProjectCard({ project, priority = false }) {
   const [isExpanded, setIsExpanded] = useState(false)
   const isLongDescription = project.description && project.description.length > 150
 
@@ -13,7 +13,10 @@ export function ProjectCard({ project }) {
       <div className="w-full aspect-video bg-muted/50 overflow-hidden relative shrink-0">
         <img 
           src={project.screenshots[0]} 
-          alt={project.title} 
+          alt={project.title}
+          fetchpriority={priority ? "high" : undefined}
+          loading={priority ? undefined : "lazy"}
+          decoding="async"
           className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 hover:scale-105"
         />
       </div>

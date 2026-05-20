@@ -11,7 +11,7 @@ export function IntroSection({ personalInfo }) {
     <section className="flex flex-col h-full w-full p-8 pt-12 xl:p-12 xl:pt-16 glass-panel overflow-y-auto hidden-scrollbar">
       <div className="flex items-center justify-between mb-10">
         <Avatar className="h-48 w-48 border border-border">
-          <AvatarImage src={avatarUrl} alt={name} />
+          <AvatarImage src={avatarUrl} alt={name} fetchpriority="high" decoding="async" />
           <AvatarFallback>{name.charAt(0)}</AvatarFallback>
         </Avatar>
         <ThemeToggle />

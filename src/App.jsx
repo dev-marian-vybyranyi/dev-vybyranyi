@@ -25,8 +25,8 @@ function App() {
               Previous projects
             </h2>
             <div className="flex flex-col gap-8">
-              {portfolioData.projects.map((project) => (
-                <ProjectCard key={project.id} project={project} />
+              {portfolioData.projects.map((project, index) => (
+                <ProjectCard key={project.id} project={project} priority={index === 0} />
               ))}
             </div>
           </section>

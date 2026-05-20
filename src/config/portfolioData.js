@@ -7,7 +7,7 @@ export const portfolioData = {
     socialLinks: {
       github: "https://github.com/dev-marian-vybyranyi",
     },
-    introVideoUrl: "hhttps://youtu.be/ytz0ce00COY"
+    introVideoUrl: "https://youtu.be/ytz0ce00COY"
   },
   skills: [
     {

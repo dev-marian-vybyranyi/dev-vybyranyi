@@ -27,18 +27,40 @@ export function IntroSection({ personalInfo }) {
 
         <p className="text-muted-foreground leading-relaxed text-sm">{bio}</p>
 
-        {introVideoUrl && (
-          <div className="mt-8 rounded-xl overflow-hidden border border-border shadow-sm aspect-video bg-muted relative">
-            <video
-              src={introVideoUrl}
-              controls
-              className="absolute inset-0 w-full h-full object-cover"
-              preload="metadata"
-            >
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        )}
+        {introVideoUrl && (() => {
+          // Helper to extract YouTube ID and format embed URL
+          const getYouTubeEmbedUrl = (url) => {
+            if (!url) return null;
+            const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+            const match = url.match(regExp);
+            return (match && match[2].length === 11) ? `https://www.youtube.com/embed/${match[2]}` : null;
+          };
+          
+          const youtubeEmbed = getYouTubeEmbedUrl(introVideoUrl);
+
+          return (
+            <div className="mt-8 rounded-xl overflow-hidden border border-border shadow-sm aspect-video bg-muted relative">
+              {youtubeEmbed ? (
+                <iframe
+                  src={youtubeEmbed}
+                  title="YouTube video player"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+              ) : (
+                <video
+                  src={introVideoUrl}
+                  controls
+                  className="absolute inset-0 w-full h-full object-cover"
+                  preload="metadata"
+                >
+                  Your browser does not support the video tag.
+                </video>
+              )}
+            </div>
+          );
+        })()}
 
         <div className="flex gap-4">
           <Button

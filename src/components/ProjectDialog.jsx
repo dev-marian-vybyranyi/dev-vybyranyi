@@ -1,4 +1,4 @@
-import { ExternalLink, Github } from "lucide-react"
+import { ExternalLink, Code } from "lucide-react"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import { Badge } from "@/components/ui/badge"
@@ -64,7 +64,7 @@ export function ProjectDialog({ project, open, onOpenChange }) {
             {project.githubUrl && (
               <Button asChild variant="outline" className="w-full justify-center" size="lg">
                 <a href={project.githubUrl} target="_blank" rel="noreferrer">
-                  <Github className="mr-2 h-4 w-4" />
+                  <Code className="mr-2 h-4 w-4" />
                   View Source Code
                 </a>
               </Button>

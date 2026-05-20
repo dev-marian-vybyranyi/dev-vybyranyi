@@ -1,4 +1,4 @@
-import { Github, Linkedin, Send } from "lucide-react"
+import { Code, Briefcase, Send } from "lucide-react"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "./ThemeToggle"
@@ -29,12 +29,12 @@ export function IntroSection({ personalInfo }) {
         <div className="flex gap-4">
           <Button variant="outline" size="icon" asChild className="rounded-full">
             <a href={socialLinks.github} target="_blank" rel="noreferrer" aria-label="GitHub">
-              <Github className="h-4 w-4" />
+              <Code className="h-4 w-4" />
             </a>
           </Button>
           <Button variant="outline" size="icon" asChild className="rounded-full">
             <a href={socialLinks.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn">
-              <Linkedin className="h-4 w-4" />
+              <Briefcase className="h-4 w-4" />
             </a>
           </Button>
           <Button variant="outline" size="icon" asChild className="rounded-full">

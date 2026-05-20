@@ -17,19 +17,19 @@ export const portfolioData = {
     {
       category: "Front-End Development",
       items: [
-        "Next.JS", "React.JS", "Redux", "Redux-Toolkit", "Material UI", 
-        "Ant Design", "TailwindCSS", "Shadcn UI", "styled-components", 
-        "SCSS/Less/Sass", "HTML5/CSS3", "chart.js", "ApexCharts", 
+        "Next.JS", "React.JS", "Redux", "Redux-Toolkit", "Material UI",
+        "Ant Design", "TailwindCSS", "Shadcn UI", "styled-components",
+        "SCSS/Less/Sass", "HTML5/CSS3", "chart.js", "ApexCharts",
         "Highcharts", "Webflow"
       ]
     },
     {
       category: "Back-End Development",
       items: [
-        "Node.js", "Express.js", "Nest.js", "Firebase", "Supabase", 
-        "GraphQL", "Sequelize", "TypeORM", "Stripe", "Twilio", 
-        "SendGrid", "RabbitMQ", "socket.io", "Websockets", "Auth0", 
-        "JWT", "Actions (CI/CD)", "Mocha", "Jest", "Docker", 
+        "Node.js", "Express.js", "Nest.js", "Firebase", "Supabase",
+        "GraphQL", "Sequelize", "TypeORM", "Stripe", "Twilio",
+        "SendGrid", "RabbitMQ", "socket.io", "Websockets", "Auth0",
+        "JWT", "Actions (CI/CD)", "Mocha", "Jest", "Docker",
         "Algolia", "Kafka", "ElasticSearch"
       ]
     },
@@ -82,36 +82,40 @@ export const portfolioData = {
   projects: [
     {
       id: "project-1",
-      title: "Neon Finance",
-      description: "A modern fintech dashboard built with Next.js, featuring real-time websocket data and intricate data visualizations.",
-      tags: ["React", "TypeScript", "Tailwind", "D3.js"],
-      screenshots: [
-        "https://picsum.photos/seed/neon1/800/500"
+      title: "SaaS AI Powered Platform",
+      description: "An accounting and forecasting platform tailormade for SaaS/Fintech/Marketplace businesses. The company started from scratch and built an accounting engine that delivers what a digital business needs and stripped away everything you don't need. Crispa has a pre-defined account structure, designed to provide you with exactly the kind of reporting and metrics you need to run your business and keep your stakeholders informed. Forecasting is done in the exact same structure as your reporting, so your actuals and forecast scenarios will always match and your key metrics will be in sync.",
+      tags: ["Next.js", "Redux", "Tailwind CSS", "Chart.js", "Material UI", "Open AI API"
       ],
-      demoUrl: "https://example.com/demo",
-      githubUrl: "https://github.com/example/neon-finance"
+      screenshots: [
+        "public/projects/project-1.png",
+      ],
     },
     {
       id: "project-2",
-      title: "Aura Commerce",
-      description: "Headless e-commerce platform with ultra-fast page transitions, intelligent search, and dynamic cart management.",
-      tags: ["Next.js", "Shopify", "Framer Motion"],
+      title: "SaaS Telematics platform",
+      description: "Fleet management and telematics platform for monitoring vehicles, routes, and operational activity in real time. The system helps fleet operators track vehicle locations on interactive maps, review vehicle status and telemetry data, replay historical routes, receive operational notifications, and manage fleet performance through data-heavy dashboards. \nThe platform is designed for logistics, transportation, and field operations teams that need clear visibility into vehicle movement, driver activity, asset status, and route history. It combines real-time tracking, map-based monitoring, reporting, alerts, and role-based access into one operational web portal.",
+      tags: ["React", "Next.js", "NestJS", "TypeScript", "Prisma / TypeORM", "PostgreSQL / Amazon RDS", "AWS EC2", "S3", "WebSocket / Socket.IO", "Elasticsearch", "Google Maps API / Mapbox", "Passport / OAuth2", "Stripe"],
       screenshots: [
-        "https://picsum.photos/seed/aura1/800/500"
+        "public/projects/project-2.png",
       ],
-      demoUrl: "https://example.com/aura",
-      githubUrl: "https://github.com/example/aura-commerce"
     },
     {
       id: "project-3",
-      title: "Nova Workspace",
-      description: "Collaborative canvas for remote teams to sketch, plan, and execute projects in real-time.",
-      tags: ["React", "Zustand", "WebSockets", "Canvas API"],
+      title: "Car Insurance provider YDE Insurance",
+      description: "High load dealer portal for managing insurance claims, agreements, and vehicle estimates with complex multi step workflows and real time status tracking.",
+      tags: ["React", "Next.js", "App Router", "TypeScript", "TanStack Query", "Zustand", "React Hook", "Form", "Zod", "Tailwind CSS v4", "Radix UI", "shadcn/ui", "Material UI"],
       screenshots: [
-        "https://picsum.photos/seed/nova1/800/500"
+        "public/projects/project-3.png"
       ],
-      demoUrl: "https://example.com/nova",
-      githubUrl: "https://github.com/example/nova-workspace"
+    },
+    {
+      id: "project-4",
+      title: "B2B AI-powered platform",
+      description: "AI-powered enterprise SaaS platform for organizational change management and digital transformation. This B2B platform helps companies automate operational workflows, manage transformation initiatives, generate AI-assisted business assets, and coordinate enterprise-wide process execution through centralized dashboards and collaboration tools.",
+      tags: ["Next.js", "React", "NestJS", "Chart.js", "Stripe", "Automation tools", "Open AI API", "Material UI", "TailwindCSS", "Shadcn UI"],
+      screenshots: [
+        "public/projects/project-4.png"
+      ],
     }
   ]
 };

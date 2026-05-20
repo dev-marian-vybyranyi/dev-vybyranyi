@@ -1,82 +1,43 @@
-import { useState, useRef, useEffect } from "react"
 import { ThemeProvider } from "@/components/theme-provider"
 import { IntroSection } from "@/components/IntroSection"
 import { ProjectCard } from "@/components/ProjectCard"
-import { ProjectDialog } from "@/components/ProjectDialog"
+import { EmploymentSection, EducationSection, SkillsSection, LanguagesSection } from "@/components/ResumeSections"
 import { portfolioData } from "@/config/portfolioData"
 
 function App() {
-  const [selectedProject, setSelectedProject] = useState(null)
-  const [dialogOpen, setDialogOpen] = useState(false)
-  const scrollContainerRef = useRef(null)
-
-  useEffect(() => {
-    const handleWheel = (e) => {
-      // If the event target is inside a scrollable element (like a dialog or intro section), don't hijack it
-      const target = e.target
-      
-      // Check if target is inside the dialog or intro section which have vertical scroll
-      if (
-        target.closest('[role="dialog"]') || 
-        target.closest('.overflow-y-auto') ||
-        target.closest('.hidden-scrollbar')
-      ) {
-        return
-      }
-
-      if (e.deltaY !== 0 && scrollContainerRef.current) {
-        // Prevent default vertical scrolling to translate to horizontal
-        if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-          scrollContainerRef.current.scrollLeft += e.deltaY * 1.5
-          e.preventDefault()
-        }
-      }
-    }
-
-    const container = scrollContainerRef.current
-    if (container) {
-      container.addEventListener("wheel", handleWheel, { passive: false })
-    }
-
-    return () => {
-      if (container) {
-        container.removeEventListener("wheel", handleWheel)
-      }
-    }
-  }, [])
-
-  const handleProjectClick = (project) => {
-    setSelectedProject(project)
-    setDialogOpen(true)
-  }
-
   return (
     <ThemeProvider defaultTheme="dark" storageKey="portfolio-theme">
-      <div 
-        ref={scrollContainerRef}
-        className="flex h-screen w-screen overflow-x-auto overflow-y-hidden snap-x snap-mandatory bg-background text-foreground"
-      >
-        <IntroSection personalInfo={portfolioData.personalInfo} />
+      <div className="flex flex-col lg:flex-row min-h-screen bg-background text-foreground relative">
         
-        <main className="flex items-center gap-8 px-12 py-8 min-w-max">
-          {portfolioData.projects.map((project, idx) => (
-            <div key={project.id} className="snap-center">
-              <ProjectCard 
-                project={project} 
-                onClick={handleProjectClick} 
-              />
+        {/* Left Sidebar - Sticky on Desktop */}
+        <div className="w-full lg:w-[400px] shrink-0 lg:sticky lg:top-0 lg:h-screen z-10 border-b lg:border-b-0 lg:border-r border-border/40">
+          <IntroSection personalInfo={portfolioData.personalInfo} />
+        </div>
+        
+        {/* Right Content Area - Vertical Scroll */}
+        <main className="flex-1 w-full max-w-4xl mx-auto px-6 py-12 lg:px-16 lg:py-20 xl:px-24">
+          
+          <EmploymentSection employment={portfolioData.employment} />
+
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold tracking-tight mb-8 text-foreground border-b border-border/50 pb-4">
+              Featured Projects
+            </h2>
+            <div className="flex flex-col gap-8">
+              {portfolioData.projects.map((project) => (
+                <ProjectCard key={project.id} project={project} />
+              ))}
             </div>
-          ))}
-          {/* Spacer at the end for comfortable scrolling */}
-          <div className="w-12 shrink-0"></div>
+          </section>
+
+          <EducationSection education={portfolioData.education} />
+          
+          <SkillsSection skills={portfolioData.skills} />
+          
+          <LanguagesSection languages={portfolioData.languages} />
+
         </main>
       </div>
-
-      <ProjectDialog 
-        project={selectedProject} 
-        open={dialogOpen} 
-        onOpenChange={setDialogOpen} 
-      />
     </ThemeProvider>
   )
 }

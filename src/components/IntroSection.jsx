@@ -7,7 +7,7 @@ export function IntroSection({ personalInfo }) {
   const { name, role, avatarUrl, bio, socialLinks, introVideoUrl } = personalInfo
 
   return (
-    <section className="flex flex-col h-full w-full max-w-sm shrink-0 p-8 pt-12 xl:p-12 xl:pt-16 border-r border-border/40 bg-background/50 backdrop-blur-sm z-10 sticky left-0 overflow-y-auto hidden-scrollbar">
+    <section className="flex flex-col h-full w-full p-8 pt-12 xl:p-12 xl:pt-16 bg-background/50 backdrop-blur-sm overflow-y-auto hidden-scrollbar">
       <div className="flex items-center justify-between mb-10">
         <Avatar className="h-16 w-16 border border-border">
           <AvatarImage src={avatarUrl} alt={name} />

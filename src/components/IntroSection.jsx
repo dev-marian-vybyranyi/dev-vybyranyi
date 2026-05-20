@@ -1,4 +1,4 @@
-import { Code, Briefcase, Send } from "lucide-react"
+import { Code } from "lucide-react"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "./ThemeToggle"
@@ -30,16 +30,6 @@ export function IntroSection({ personalInfo }) {
           <Button variant="outline" size="icon" asChild className="rounded-full">
             <a href={socialLinks.github} target="_blank" rel="noreferrer" aria-label="GitHub">
               <Code className="h-4 w-4" />
-            </a>
-          </Button>
-          <Button variant="outline" size="icon" asChild className="rounded-full">
-            <a href={socialLinks.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn">
-              <Briefcase className="h-4 w-4" />
-            </a>
-          </Button>
-          <Button variant="outline" size="icon" asChild className="rounded-full">
-            <a href={socialLinks.telegram} target="_blank" rel="noreferrer" aria-label="Telegram">
-              <Send className="h-4 w-4" />
             </a>
           </Button>
         </div>

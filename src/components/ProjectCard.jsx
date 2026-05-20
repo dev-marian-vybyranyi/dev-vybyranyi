@@ -5,7 +5,7 @@ import { ExternalLink, Code } from "lucide-react"
 
 export function ProjectCard({ project }) {
   return (
-    <Card className="flex flex-col sm:flex-row overflow-hidden border-border/50 hover:border-border transition-all duration-300 bg-card/50">
+    <Card className="flex flex-col sm:flex-row overflow-hidden border-border/50 hover:border-border transition-all duration-300 bg-card/50 py-0">
       <div className="w-full sm:w-1/3 min-h-[200px] sm:min-h-full bg-muted overflow-hidden relative shrink-0">
         <img 
           src={project.screenshots[0]} 
@@ -29,25 +29,6 @@ export function ProjectCard({ project }) {
         <p className="text-muted-foreground text-base leading-relaxed mb-6 flex-1">
           {project.description}
         </p>
-
-        <div className="flex flex-wrap gap-3 mt-auto">
-          {project.demoUrl && (
-            <Button asChild size="sm" className="group">
-              <a href={project.demoUrl} target="_blank" rel="noreferrer">
-                View Live
-                <ExternalLink className="ml-2 h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </a>
-            </Button>
-          )}
-          {project.githubUrl && (
-            <Button asChild variant="outline" size="sm">
-              <a href={project.githubUrl} target="_blank" rel="noreferrer">
-                <Code className="mr-2 h-3.5 w-3.5" />
-                Source
-              </a>
-            </Button>
-          )}
-        </div>
       </CardContent>
     </Card>
   )

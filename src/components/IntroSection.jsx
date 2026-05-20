@@ -1,6 +1,6 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-import { Code } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 import { ThemeToggle } from "./ThemeToggle";
 
 export function IntroSection({ personalInfo }) {
@@ -8,7 +8,7 @@ export function IntroSection({ personalInfo }) {
     personalInfo;
 
   return (
-    <section className="flex flex-col h-full w-full p-8 pt-12 xl:p-12 xl:pt-16 bg-background/50 backdrop-blur-sm overflow-y-auto hidden-scrollbar">
+    <section className="flex flex-col h-full w-full p-8 pt-12 xl:p-12 xl:pt-16 glass-panel overflow-y-auto hidden-scrollbar">
       <div className="flex items-center justify-between mb-10">
         <Avatar className="h-48 w-48 border border-border">
           <AvatarImage src={avatarUrl} alt={name} />
@@ -53,7 +53,7 @@ export function IntroSection({ personalInfo }) {
               rel="noreferrer"
               aria-label="GitHub"
             >
-              <Code className="h-4 w-4" />
+              <FaGithub className="h-5 w-5" />
             </a>
           </Button>
         </div>

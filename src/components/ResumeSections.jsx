@@ -17,16 +17,14 @@ export function EmploymentSection({ employment }) {
         {employment.map((job) => (
           <div key={job.id} className="relative pl-6 sm:pl-0">
             {/* Timeline dot for mobile, hidden on desktop if preferred, but let's keep it simple */}
-            <div className="hidden sm:block absolute left-[-41px] top-1.5 h-3 w-3 rounded-full bg-primary ring-4 ring-background" />
-            
             <div className="flex flex-col sm:flex-row sm:items-baseline justify-between mb-2 gap-2">
               <h3 className="text-xl font-semibold text-foreground">{job.role}</h3>
               <span className="text-sm font-medium text-muted-foreground bg-secondary/50 px-3 py-1 rounded-full whitespace-nowrap self-start sm:self-auto">
                 {job.period}
               </span>
             </div>
-            <p className="text-lg text-primary/80 mb-4 font-medium">{job.company}</p>
-            <p className="text-muted-foreground leading-relaxed whitespace-pre-line">
+            <p className="text-lg text-primary/90 mb-3 font-medium">{job.company}</p>
+            <p className="text-muted-foreground leading-loose whitespace-pre-line max-w-prose text-base">
               {job.description}
             </p>
           </div>
@@ -50,8 +48,8 @@ export function EducationSection({ education }) {
                 {edu.period}
               </span>
             </div>
-            <p className="text-lg text-primary/80 mb-3 font-medium">{edu.institution}</p>
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-lg text-primary/90 mb-2 font-medium">{edu.institution}</p>
+            <p className="text-muted-foreground leading-loose max-w-prose text-base">
               {edu.description}
             </p>
           </div>
@@ -72,7 +70,7 @@ export function SkillsSection({ skills }) {
             <h3 className="text-lg font-semibold text-foreground mb-3">{skillCategory.category}</h3>
             <div className="flex flex-wrap gap-2">
               {skillCategory.items.map((item) => (
-                <Badge key={item} variant="secondary" className="px-3 py-1 text-sm font-medium bg-secondary/50 hover:bg-secondary">
+                <Badge key={item} variant="secondary" className="px-3 py-1 text-sm font-medium bg-secondary/50 rounded-full hover:bg-secondary">
                   {item}
                 </Badge>
               ))}
@@ -91,9 +89,9 @@ export function LanguagesSection({ languages }) {
       <SectionHeading>Languages</SectionHeading>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {languages.map((lang) => (
-          <div key={lang.name} className="p-5 rounded-xl border border-border/50 bg-card/50">
-            <h3 className="text-xl font-semibold text-foreground mb-3">
-              {lang.name} <span className="text-primary/80">{lang.level}</span>
+          <div key={lang.name} className="p-6 rounded-xl glass-card">
+            <h3 className="text-xl font-semibold text-foreground mb-4 flex items-center justify-between">
+              {lang.name} <span className="text-primary/90 text-sm font-bold bg-primary/10 px-3 py-1 rounded-full">{lang.level}</span>
             </h3>
             <div className="space-y-1 text-sm text-muted-foreground">
               <p><strong className="font-medium text-foreground/80">Spoken:</strong> {lang.spoken}</p>

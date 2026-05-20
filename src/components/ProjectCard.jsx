@@ -5,8 +5,8 @@ import { ExternalLink, Code } from "lucide-react"
 
 export function ProjectCard({ project }) {
   return (
-    <Card className="flex flex-col overflow-hidden border-border/50 hover:border-border transition-all duration-300 bg-card/50 py-0">
-      <div className="w-full aspect-video bg-muted overflow-hidden relative shrink-0">
+    <Card className="flex flex-col overflow-hidden border-border/50 hover:border-border/80 glass-card py-0">
+      <div className="w-full aspect-video bg-muted/50 overflow-hidden relative shrink-0">
         <img 
           src={project.screenshots[0]} 
           alt={project.title} 
@@ -25,13 +25,13 @@ export function ProjectCard({ project }) {
         
         <div className="flex flex-wrap gap-2 mb-4">
           {project.tags.map((tag) => (
-            <Badge key={tag} variant="secondary" className="font-normal text-xs bg-secondary/50">
+            <Badge key={tag} variant="secondary" className="font-normal text-xs rounded-full bg-secondary/50">
               {tag}
             </Badge>
           ))}
         </div>
 
-        <p className="text-muted-foreground text-base leading-relaxed mb-6 flex-1">
+        <p className="text-muted-foreground text-base leading-loose max-w-prose mb-8 flex-1">
           {project.description}
         </p>
       </CardContent>

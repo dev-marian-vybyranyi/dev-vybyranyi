@@ -11,7 +11,7 @@ import { portfolioData } from "@/config/portfolioData";
 
 function App() {
   return (
-    <ThemeProvider defaultTheme="dark" storageKey="portfolio-theme">
+    <ThemeProvider defaultTheme="light" storageKey="portfolio-theme">
       <div className="flex flex-col lg:flex-row min-h-screen bg-background text-foreground relative">
         {/* Left Sidebar - Sticky on Desktop */}
         <div className="w-full lg:w-[400px] shrink-0 lg:sticky lg:top-0 lg:h-screen z-10 border-b lg:border-b-0 lg:border-r border-border/40">

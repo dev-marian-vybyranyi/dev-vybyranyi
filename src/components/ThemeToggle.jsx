@@ -9,8 +9,15 @@ export function ThemeToggle() {
     <Button
       variant="ghost"
       size="icon"
-      onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-      className="rounded-full w-10 h-10"
+      onClick={() => {
+        if (theme === "system") {
+          const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
+          setTheme(systemTheme === "dark" ? "light" : "dark")
+        } else {
+          setTheme(theme === "light" ? "dark" : "light")
+        }
+      }}
+      className="rounded-full w-10 h-10 glass hover:bg-white/20 dark:hover:bg-slate-800/50"
     >
       <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
       <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />

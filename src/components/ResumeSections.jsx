@@ -91,9 +91,14 @@ export function LanguagesSection({ languages }) {
       <SectionHeading>Languages</SectionHeading>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {languages.map((lang) => (
-          <div key={lang.name} className="p-4 rounded-xl border border-border/50 bg-card/50">
-            <h3 className="text-lg font-semibold text-foreground mb-1">{lang.name}</h3>
-            <p className="text-sm text-muted-foreground">{lang.level}</p>
+          <div key={lang.name} className="p-5 rounded-xl border border-border/50 bg-card/50">
+            <h3 className="text-xl font-semibold text-foreground mb-3">
+              {lang.name} <span className="text-primary/80">{lang.level}</span>
+            </h3>
+            <div className="space-y-1 text-sm text-muted-foreground">
+              <p><strong className="font-medium text-foreground/80">Spoken:</strong> {lang.spoken}</p>
+              <p><strong className="font-medium text-foreground/80">Written:</strong> {lang.written}</p>
+            </div>
           </div>
         ))}
       </div>

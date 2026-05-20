@@ -2,7 +2,7 @@ export const portfolioData = {
   personalInfo: {
     name: "Marian Vybyranyi",
     role: "Full-Stack Developer",
-    avatarUrl: "public/avatar.jpg",
+    avatarUrl: "/avatar.jpg",
     bio: "I'm a Full-Stack JavaScript/TypeScript developer with 4  years of experience building scalable web applications for startups and SaaS platforms. I work across both frontend and backend development, delivering responsive user interfaces, reliable APIs, and maintainable production systems.",
     socialLinks: {
       github: "https://github.com/dev-marian-vybyranyi",
@@ -105,7 +105,7 @@ export const portfolioData = {
       tags: ["Next.js", "Redux", "Tailwind CSS", "Chart.js", "Material UI", "Open AI API"
       ],
       screenshots: [
-        "public/projects/project-1.png",
+        "/projects/project-1.png",
       ],
     },
     {
@@ -115,7 +115,7 @@ export const portfolioData = {
       description: "Fleet management and telematics platform for monitoring vehicles, routes, and operational activity in real time. The system helps fleet operators track vehicle locations on interactive maps, review vehicle status and telemetry data, replay historical routes, receive operational notifications, and manage fleet performance through data-heavy dashboards. \nThe platform is designed for logistics, transportation, and field operations teams that need clear visibility into vehicle movement, driver activity, asset status, and route history. It combines real-time tracking, map-based monitoring, reporting, alerts, and role-based access into one operational web portal.",
       tags: ["React", "Next.js", "NestJS", "TypeScript", "Prisma / TypeORM", "PostgreSQL / Amazon RDS", "AWS EC2", "S3", "WebSocket / Socket.IO", "Elasticsearch", "Google Maps API / Mapbox", "Passport / OAuth2", "Stripe"],
       screenshots: [
-        "public/projects/project-2.png",
+        "/projects/project-2.png",
       ],
     },
     {
@@ -125,7 +125,7 @@ export const portfolioData = {
       description: "High load dealer portal for managing insurance claims, agreements, and vehicle estimates with complex multi step workflows and real time status tracking.",
       tags: ["React", "Next.js", "App Router", "TypeScript", "TanStack Query", "Zustand", "React Hook", "Form", "Zod", "Tailwind CSS v4", "Radix UI", "shadcn/ui", "Material UI"],
       screenshots: [
-        "public/projects/project-3.png"
+        "/projects/project-3.png"
       ],
     },
     {
@@ -135,7 +135,7 @@ export const portfolioData = {
       description: "AI-powered enterprise SaaS platform for organizational change management and digital transformation. This B2B platform helps companies automate operational workflows, manage transformation initiatives, generate AI-assisted business assets, and coordinate enterprise-wide process execution through centralized dashboards and collaboration tools.",
       tags: ["Next.js", "React", "NestJS", "Chart.js", "Stripe", "Automation tools", "Open AI API", "Material UI", "TailwindCSS", "Shadcn UI"],
       screenshots: [
-        "public/projects/project-4.png"
+        "/projects/project-4.png"
       ],
     }
   ]

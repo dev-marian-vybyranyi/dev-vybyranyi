@@ -85,14 +85,12 @@ export const portfolioData = {
       id: "edu-1",
       degree: "Bachelor, Computer Science",
       institution: "Chernivtsi National University",
-      period: "2023 - PRESENT",
       description: ""
     },
     {
       id: "edu-2",
       degree: "Junior Bachelor, Software Engineering",
       institution: "Gusyatyn Vocational College of TNTU",
-      period: "2021 - 2023",
       description: ""
     }
   ],

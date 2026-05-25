@@ -35,7 +35,7 @@ export const portfolioData = {
     },
     {
       category: "Servers/Databases",
-      items: ["MongoDB", "Firebase", "PostgreSQL", "MySQL", "Pinecone DB", "Neo4j"]
+      items: ["MongoDB", "Firebase", "PostgreSQL", "MySQL", "Pinecone DB", "Neo4j", "Supabase", "GraphQL"]
     },
     {
       category: "Cloud Platforms",
@@ -51,14 +51,14 @@ export const portfolioData = {
     }
   ],
   languages: [
-    { 
-      name: "English", 
+    {
+      name: "English",
       level: "B2",
       spoken: "Upper-Intermediate",
       written: "Upper-Intermediate"
     },
-    { 
-      name: "Ukrainian", 
+    {
+      name: "Ukrainian",
       level: "Native",
       spoken: "Native",
       written: "Native"

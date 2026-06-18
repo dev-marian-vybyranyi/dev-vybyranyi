@@ -69,21 +69,21 @@ export const portfolioData = {
       id: "emp-3",
       role: "Full-Stack Developer",
       company: "Incode Group",
-      period: "JULY 2025 - PRESENT",
+      // period: "JULY 2025 - PRESENT",
       description: "- Focus on building high-quality web applications with a strong emphasis on user experience and reliable performance\n- Deliver projects end-to-end - from idea to a fully functional product, aligned with business goals and timelines\n- Core expertise includes full-stack development across modern web applications (React, Next.js, Node.js, NestJS, PostgreSQL, AWS)"
     },
     {
       id: "emp-1",
       role: "IT Academy Teacher",
       company: "Redmonkey IT Academy, Chernivtsi",
-      period: "SEPTEMBER 2024 - PRESENT",
+      // period: "SEPTEMBER 2024 - PRESENT",
       description: "- Teach HTML, CSS, JavaScript, React, Python, PHP, WordPress\n- Explain core concepts such as SPA architecture, REST APIs, and Git\n- Mentor students during projects and conduct regular code reviews"
     },
     {
       id: "emp-2",
       role: "IT Support Specialist",
       company: "MTA, Chernivtsi",
-      period: "FEBRUARY 2025 - JUNE 2025",
+      // period: "FEBRUARY 2025 - JUNE 2025",
       description: "- Maintained stable operation of the local network, routers and printers.\n- Provided technical support to users and quick troubleshooting.\n- Administered computers, networks and office equipment."
     },
   ],
